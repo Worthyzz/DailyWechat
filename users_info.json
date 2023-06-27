@@ -4,7 +4,8 @@
       "user_name_1": "小张",
       "user_name_2": "朱朱",
       "user_id": "o4t345y8X2K5IUndbMCnbe8hfjcg",
-      "born_date": "1998-11-22",
+      "born_date1": "1998-11-22",
+      "born_date2": "2001-03-17",
       "start_date": "2022-08-05",
       "city": "wuhan"
     },
@@ -12,7 +13,8 @@
       "user_name_1": "朱朱",
       "user_name_2": "小张",
       "user_id": "o4t345zltQq7hywpcMNkXn81ALgQ",
-      "born_date": "2001-03-17",
+      "born_date1": "2001-03-17",
+      "born_date2": "1998-11-22",
       "start_date": "2022-08-05",
       "city": "luan"
     }
