@@ -25,6 +25,7 @@ if __name__ == '__main__':
         birthday = born_date[5:]
         city = user_info['city']
         user_id = user_info['user_id']
+        start_date = user_info['start_date']
         name = user_info['user_name'].upper()
 
 
@@ -60,6 +61,10 @@ if __name__ == '__main__':
         }
         data['birthday_left'] = {
             'value': get_birthday(birthday),
+            'color': get_random_color()
+        }
+        data['start_date'] = {
+            'value': get_count(start_date),
             'color': get_random_color()
         }
         data['wind'] = {
