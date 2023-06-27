@@ -21,8 +21,10 @@ if __name__ == '__main__':
     num = 0
     words=get_words()
     for user_info in data:
-        born_date = user_info['born_date']
-        birthday = born_date[5:]
+        born_date1 = user_info['born_date1']
+        birthday1 = born_date1[5:]
+        born_date2 = user_info['born_date2']
+        birthday2 = born_date2[5:]
         city = user_info['city']
         user_id = user_info['user_id']
         start_date = user_info['start_date']
@@ -57,11 +59,15 @@ if __name__ == '__main__':
             'color': '#01847F'
         }
         data['born_days'] = {
-            'value': get_count(born_date),
+            'value': get_count(born_date1),
             'color': get_random_color()
         }
-        data['birthday_left'] = {
-            'value': get_birthday(birthday),
+        data['birthday_left1'] = {
+            'value': get_birthday(birthday1),
+            'color': get_random_color()
+        }
+        data['birthday_left2'] = {
+            'value': get_birthday(birthday2),
             'color': get_random_color()
         }
         data['start_date'] = {
