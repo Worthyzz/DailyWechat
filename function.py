@@ -28,7 +28,6 @@ def get_random_color():
 def get_weather(city, key):
     url = f"https://api.seniverse.com/v3/weather/daily.json?key={key}&location={city}&language=zh-Hans&unit=c&start=-1&days=5"
     res = requests.get(url).json()
-    print(res)
     weather = (res['results'][0])["daily"][0]
     city = (res['results'][0])["location"]["name"]
     return city, weather
