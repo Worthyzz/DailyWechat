@@ -26,7 +26,8 @@ if __name__ == '__main__':
         city = user_info['city']
         user_id = user_info['user_id']
         start_date = user_info['start_date']
-        name = user_info['user_name'].upper()
+        name1 = user_info['user_name_1'].upper()
+        name2 = user_info['user_name_2'].upper()
 
 
         wea_city,weather = get_weather(city,weather_key)
@@ -71,8 +72,12 @@ if __name__ == '__main__':
             'value': weather['wind_direction'],
             'color': get_random_color()
         }
-        data['name'] = {
-            'value': name,
+        data['name1'] = {
+            'value': name1,
+            'color': get_random_color()
+        }
+        data['name2'] = {
+            'value': name2,
             'color': get_random_color()
         }
 
