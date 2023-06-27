@@ -2,6 +2,7 @@ from wechatpy import WeChatClient
 from wechatpy.client.api import WeChatMessage
 import os
 import json
+import http.client, urllib
 from function import *
 
 
