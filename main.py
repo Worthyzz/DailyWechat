@@ -86,7 +86,7 @@ if __name__ == '__main__':
             'value': name2,
             'color': get_random_color()
         }
-
+        print(data)
         res = wm.send_template(user_id, template_id, data)
         print(res)
         num += 1
