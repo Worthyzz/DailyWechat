@@ -30,7 +30,7 @@ def get_words():
     result = tianapi.read()
     data = result.decode('utf-8')
     dict_data = json.loads(data)
-    return dict_data.json()['result']['content']
+    return dict_data['result']['content']
 
 def get_random_color():
     return "#%06x" % random.randint(0, 0xFFFFFF)
