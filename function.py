@@ -13,13 +13,23 @@ def get_time():
     return nowtime.strftime("%Y年%m月%d日 %H时%M分 ") + a
 
 
-def get_words():
+def get_words2():
     words = requests.get("https://api.shadiao.pro/chp")
     if words.status_code != 200:
         return get_words()
     print(words.json()['data']['text'])
     return words.json()['data']['text']
-
+    
+def get_words():
+    conn = http.client.HTTPSConnection('apis.tianapi.com')  #接口域名
+    params = urllib.parse.urlencode({'key':'ef4370c0fbe5eed37c23c7ba6e48e948'})
+    headers = {'Content-type':'application/x-www-form-urlencoded'}
+    conn.request('POST','/caihongpi/index',params,headers)
+    tianapi = conn.getresponse()
+    result = tianapi.read()
+    data = result.decode('utf-8')
+    dict_data = json.loads(data)
+    return dict_data
 
 def get_random_color():
     return "#%06x" % random.randint(0, 0xFFFFFF)
