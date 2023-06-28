@@ -13,7 +13,7 @@ def get_time():
     a = dictDate[nowtime.strftime('%A')]
     return nowtime.strftime("%Y年%m月%d日 %H时%M分 ") + a
 
-def get_words():
+def get_words2():
   conn = http.client.HTTPSConnection('api.tianapi.com')
   params = urllib.parse.urlencode({'key':'ef4370c0fbe5eed37c23c7ba6e48e948','astro':'pisces'})
   headers = {'Content-type':'application/x-www-form-urlencoded'}
@@ -23,7 +23,12 @@ def get_words():
   data = json.loads(data)
   data = str(data["newslist"][8]["content"]) + "\n爱情指数：" + str(data["newslist"][2]["content"]) + "\n"
   return data 
-
+def get_words():
+  words = requests.get("https://api.shadiao.pro/chp")
+  if words.status_code != 200:
+    return get_words()
+  return words.json()['data']['text']
+    
 def get_random_color():
     return "#%06x" % random.randint(0, 0xFFFFFF)
 
