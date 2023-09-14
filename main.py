@@ -12,6 +12,8 @@ if __name__ == '__main__':
     template_id = os.getenv("TEMPLATE_ID")
     weather_key = "SuPZBMGRxx-M1uA66"
 
+    
+
     client = WeChatClient(app_id, app_secret)
     wm = WeChatMessage(client)
 
