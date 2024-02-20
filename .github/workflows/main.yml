@@ -1,7 +1,7 @@
 name: send card
 on:
   schedule:
-  - cron:  '30 00 * * *'
+  - cron:  '45 00 * * *'
   workflow_dispatch:
 
 jobs:
