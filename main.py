@@ -5,7 +5,6 @@ import json
 import http.client, urllib
 from function import *
 
-
 if __name__ == '__main__':
     app_id = os.getenv("APP_ID")
     app_secret = os.getenv("APP_SECRET")
